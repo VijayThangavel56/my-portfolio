@@ -1,3 +1,31 @@
+/* Import Tailwind CSS. This is typically handled by a build process, but for a single file, it's included here. */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom font and animation styles */
+:root {
+  font-family: 'Inter', sans-serif;
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 8s infinite;
+}
+
+.animation-delay-500 {
+  animation-delay: 2.5s;
+}
+
+/* Ensure the root element fills the screen */
+#root {
+  min-height: 100vh;
+}
